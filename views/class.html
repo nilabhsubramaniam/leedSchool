@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox-content" ng-controller="MainCtrl" data-ng-init="init()">
+            <br>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content" style="overflow-x: scroll">
+                        <div  ui-sref="dashboards.dashboard_2" style="text-align:right;"> 
+                            <span class="btn btn-default" tooltip-placement="top" uib-tooltip="Add Class"> <i class="fa fa-plus"></i> </span>
+                       </div>
+                             <table datatable="ng" dt-options="dtOptions" id="class" class="table table-bordered dataTables-example table-hover  goal-dashboard-center">
+                                <thead>
+                                <tr>
+                                    <th rowspan="2">id</th>
+                                    <th rowspan="2">Name</th>
+                                    <th rowspan="2">Date Of birth</th>
+                                    <th rowspan="2">School</th>
+                                    <th rowspan="2">Class^v</th>
+                                    <th rowspan="2">Divison</th>
+                                    <th rowspan="2">Status</th>
+                                    <th rowspan="2">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr data-ng-repeat ="class in classList">
+                                    <td>{{class._id}}</td>
+                                    <td>{{class.fullName}} </td>
+                                    <td>{{class.dob}}</td>s
+                                    <td>{{class.school}}</td>
+                                    <td>{{class.class}}</td>
+                                    <td>{{class.divison}}</td>
+                                    <td>{{class.status}}</td>
+                                    <td>
+                                        <a ng-click="editClass()"><b>Edit</b></a>
+                                        <a ng-click="deleteClass($index)"> || <b>Delete</b></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
