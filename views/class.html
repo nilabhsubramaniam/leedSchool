@@ -25,17 +25,17 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr data-ng-repeat="class in classList">
-                                    <td>{{class._id}}</td>
-                                    <td>{{class.fullName}}</td>
-                                    <td>{{class.dob}}</td>
-                                    <td>{{class.school}}</td>
-                                    <td>{{class.class}}</td>
-                                    <td>{{class.divison}}</td>
-                                    <td>{{class.status}}</td>
+                                <tr data-ng-repeat="classDetail in classList">
+                                    <td>{{classDetail.Id}}</td>
+                                    <td>{{classDetail.fullName}}</td>
+                                    <td>{{classDetail.dob}}</td>
+                                    <td>{{classDetail.school}}</td>
+                                    <td>{{classDetail.class}}</td>
+                                    <td>{{classDetail.divison}}</td>
+                                    <td>{{classDetail.status}}</td>
                                     <td>
                                         <a ng-click="editClass()"><b>Edit</b></a>
-                                        <a ng-click="deleteClass($index)"> || <b>Delete</b></a>
+                                        <a ng-click="deleteClass(classDetail)"> || <b>Delete</b></a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -168,7 +168,7 @@
                                 </div>
                                 <div class="form-group required" style="text-align: center;">
                                     <button class="btn btn-sm btn-primary" ng-disabled="addClassForm.$invalid"
-                                            ng-click="submitClassInfo(addClassFormData)"><strong>Save</strong></button>
+                                            ng-click="submitClassInfo()"><strong>Save</strong></button>
                                 </div>
                             </form>
                         </div>
