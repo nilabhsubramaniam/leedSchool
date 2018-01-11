@@ -49,7 +49,7 @@ function MainCtrl($scope, $state,toaster) {
 
  $scope.deleteClass = function (index){
  			$scope.classList.splice(index, 1);
- }
+ };
 
 }
 
